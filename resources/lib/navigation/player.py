@@ -2,6 +2,7 @@
 """Handle playback requests"""
 from __future__ import unicode_literals
 
+import xbmc
 import xbmcplugin
 import xbmcgui
 import inputstreamhelper
