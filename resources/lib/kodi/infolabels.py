@@ -35,6 +35,7 @@ def add_info(videoid, list_item, item, raw_data):
                     ttl=g.CACHE_METADATA_TTL, to_disk=True)
     list_item.setInfo('video', infos)
     if infos.get('mediatype') in ['episode', 'movie', 'supplemental']:
+        list_item.setProperty('isFolder', 'false')
         list_item.setProperty('IsPlayable', 'true')
     for stream_type, quality_infos in quality_infos.iteritems():
         list_item.addStreamInfo(stream_type, quality_infos)
